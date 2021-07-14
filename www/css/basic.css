@@ -1,0 +1,96 @@
+body {
+    padding-top: 120px;
+}
+::-webkit-scrollbar {
+    height: 0;
+    width: 10px;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #404040;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-clip: content-box;
+    height: 36px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #606060;
+}
+
+.container {
+    text-align: justify;
+}
+
+.accordion-button {
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+    height: 100px;
+    border-color: #4d4d4d;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #4d4d4d;
+}
+
+.accordion-button::after {
+    margin-right: 50px;
+    align-items: flex-end;
+}
+
+.accordion-item:nth-child(odd) .accordion-button {
+    background-color: #1d1d1d;
+}
+
+.accordion-image {
+    height: auto;
+    max-height: 80%;
+    max-width: 20%;
+}
+
+.accordion-text {
+    position: absolute;
+    text-align: center;
+    right: 50px;
+    left: 50px;
+    font-size: 20px;
+}
+
+@media (max-width:600px) {
+    .accordion-text {
+        left: unset;
+        top: 20px;
+        right: 50px;
+    }
+
+    .accordion-button::after {
+        margin-right: 50px;
+        margin-top: 50px;
+        align-items: flex-end;
+    }
+}
+
+.accordion-button.collapsed:hover {
+    background-color: #181818;
+}
+
+.logo_top {
+    width: 30px;
+    position: relative;
+    margin-right: 10px;
+}
+
+th:nth-child(1) {
+    text-align:center;
+    vertical-align:middle;
+}
+
+td {
+    text-align: justify;
+}
+
+td:nth-child(2) { 
+    width: 70% 
+}
