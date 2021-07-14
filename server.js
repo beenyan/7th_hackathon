@@ -72,7 +72,6 @@ app.get('/addpaper', (req, res) => {
         res.redirect('/question');
 });
 
-
 app.get('/question', (req, res) => {
     let user = req.session.user;
     if (user && user.account && user.password) // 已登入者
@@ -85,6 +84,14 @@ app.get('/addquestion', (req, res) => {
     let user = req.session.user;
     if (user && user.account && user.password) // 已登入者
         res.render('addquestion');
+    else
+        res.redirect('/question');
+});
+
+app.get('/editquestion', (req, res) => {
+    let user = req.session.user;
+    if (user && user.account && user.password) // 已登入者
+        res.render('editquestion');
     else
         res.redirect('/question');
 });
